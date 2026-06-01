@@ -1,0 +1,8 @@
+{
+  "name": "sustech-adv-webgl",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo Static WebGL site"
+  }
+}
