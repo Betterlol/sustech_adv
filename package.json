@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "scripts": {
     "build": "echo Static WebGL site",
-    "vercel-build": "git lfs version && git lfs install --local && git lfs pull origin main"
+    "vercel-build": "git lfs version && git lfs install --local && REMOTE=$(git remote | head -n 1) && if [ -z \"$REMOTE\" ]; then git remote add origin https://github.com/Betterlol/sustech_adv.git && REMOTE=origin; fi && git lfs fetch $REMOTE main && git lfs checkout"
   }
 }
