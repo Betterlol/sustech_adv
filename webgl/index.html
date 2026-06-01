@@ -58,10 +58,28 @@
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/WebGL Builds.loader.js";
+      var params = new URLSearchParams(window.location.search);
+      var cdnBase = (window.__UNITY_CDN_BASE__ || params.get("cdn") || "").trim();
+
+      function trimTrailingSlash(value) {
+        return value.replace(/\/+$/, "");
+      }
+
+      function assetUrl(path) {
+        if (!cdnBase) {
+          return path;
+        }
+        return trimTrailingSlash(cdnBase) + "/" + path;
+      }
+
+      if (cdnBase) {
+        console.log("Unity CDN base:", trimTrailingSlash(cdnBase));
+      }
+
       var config = {
-        dataUrl: buildUrl + "/WebGL Builds.data.unityweb",
-        frameworkUrl: buildUrl + "/WebGL Builds.framework.js.unityweb",
-        codeUrl: buildUrl + "/WebGL Builds.wasm.unityweb",
+        dataUrl: assetUrl(buildUrl + "/WebGL Builds.data.unityweb"),
+        frameworkUrl: assetUrl(buildUrl + "/WebGL Builds.framework.js.unityweb"),
+        codeUrl: assetUrl(buildUrl + "/WebGL Builds.wasm.unityweb"),
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Sustech Adventure",
