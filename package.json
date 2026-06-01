@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "scripts": {
     "build": "echo Static WebGL site",
-    "vercel-build": "git lfs version && git lfs pull"
+    "vercel-build": "git lfs version && git lfs install --local && git lfs pull origin main"
   }
 }
