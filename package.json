@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "echo Static WebGL site"
+    "build": "echo Static WebGL site",
+    "vercel-build": "git lfs version && git lfs pull"
   }
 }

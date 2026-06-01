@@ -4,20 +4,41 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/Build/(.*)\\.wasm",
+      "source": "/Build/(.*)\\.wasm\\.unityweb",
       "headers": [
         {
           "key": "Content-Type",
           "value": "application/wasm"
+        },
+        {
+          "key": "Content-Encoding",
+          "value": "br"
         }
       ]
     },
     {
-      "source": "/Build/(.*)\\.data",
+      "source": "/Build/(.*)\\.data\\.unityweb",
       "headers": [
         {
           "key": "Content-Type",
           "value": "application/octet-stream"
+        },
+        {
+          "key": "Content-Encoding",
+          "value": "br"
+        }
+      ]
+    },
+    {
+      "source": "/Build/(.*)\\.framework\\.js\\.unityweb",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        },
+        {
+          "key": "Content-Encoding",
+          "value": "br"
         }
       ]
     }
