@@ -75,7 +75,8 @@
 
 - https://mkbk0614.itch.io/sustech
 - https://sustech-adv.vercel.app
-- https://play.unity.com/en/games/5d815566-e19c-446f-848f-f5ff39c0a6e3/webgl-builds
+- https://play.unity.com/en/games/71bf287d-e7c2-431f-a634-08e7f9509119/sustech-adventure-game
+> 注意：推荐使用 itch.io 版本，unity.com 版本可能不太稳定，而 vercel.app 版本是经过压缩的。
 
 ## 截图
 开场画面
